@@ -5,38 +5,70 @@
   text-align: center;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+@font-face {
+  font-family: Raleway;
+  src: URL(../public/Raleway-Regular.ttf);
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
+#Name{
+  text-shadow: 1px 1px 2px black;
+  font-family: Raleway;
+  font-size: 50px;
+  color: rgb(42, 165, 95);
+  text-align: left;
+}
+
+body{
+  background-image: url("https://i.pinimg.com/564x/df/3f/5d/df3f5d32b101110a320bc7ea84bc5709.jpg");
+  background-repeat: no-repeat; 
+  padding: 5px;
+  background-size: 3000px;
+  height: 450px;
+
+  margin: 0; 
+  padding: 0;
+  font-family: montserrat,'Times New Roman', Times, serif;
+}
+
+.animated-text{
+  color: #fff;
+  position: absolute;
+  top: 15%;
+  left: 20%; 
+
+  transform: translate(-50%, -50%);
+  background: #2980b9;
+  padding: 0 40 px;
+  height: 60px; 
+  overflow: hidden;
+}
+
+
+.line{
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 40px;
+  line-height:  60px;
+
+}
+
+.line:first-child{
+  animation: anim 13s infinite;
+}
+
+@keyframes anim {
+  0%{
+    margin-top: 0;
   }
-  to {
-    transform: rotate(360deg);
+  16%{
+    margin-top: -60px;
+  }
+  33%{
+    margin-top: -120px;
+  }
+  50%{
+    margin-top: -180px;
   }
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
-}
 
-.card {
-  padding: 2em;
-}
-
-.read-the-docs {
-  color: #888;
-}
