@@ -1,74 +1,228 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+body {
+  font-family: "DMSerif";
+  margin: 0;
+  padding: 0; 
+  background-image: rgb(0, 0, 0);
+  background-size: cover; 
+  background-position: center; 
+  background-repeat: no-repeat;
+  width: 100%;
+}
+
+#nav{
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  background-color: #000000;
+  height: 66px;
+}
+
+#navbar{
+  align-items: right;
+}
+
+.navbar {
+  float: right;
+  overflow: hidden;
+  /* width:100%; */
+}
+
+.image {
+  width: 600; 
+  height: 600;
+}
+
+.navbar a {
+  float: left;
+  display: block;
+  color: lightskyblue;
+  text-align: right;
+  padding: 20px 20px;
+  text-decoration: none;
+  flex-direction: row;
+}
+
+.navbar a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.section {
+  padding: 50px;
+}
+
+
+.container {
+  display: inline-block;
+}
+
+.text{
+  font-size: 30px;
+  letter-spacing: 5px;
+  font-family: monospace;
+  border-right: 3px solid;
+  width: 17%; 
+  white-space: nowrap;
+  font-family: "Signi";
+  overflow: hidden;
+  animation:
+    typing 2s,
+    cursor .4s step-end infinite alternate; 
+}
+
+.navbarr {
+  font-size: 20px;
+}
+@keyframes cursor {
+  50% {border-color: transparent}
+}
+
+@keyframes typing {
+  from {width:0}
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 @font-face {
-  font-family: Raleway;
-  src: URL(../public/Raleway-Regular.ttf);
+  font-family: DMSerif;
+  font-family: Signi;
+  src: url(assets/DMSerifDisplay-Regular.ttf);
+  src: url(assets/Signika-VariableFont_GRAD,wght.ttf)
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  position: absolute;
+  top: 77%;
+  left: 69%;
+  transform: translate(-1%, -1%);
+}
+
+ul li {
+  list-style: none;
+  margin: 0 13px;
+}
+
+ul li a {
+  position: relative; 
+  display: block;
+  width: 60px;
+  height: 60px;
+  text-align: center;
+  line-height: 63px;
+  background: #333;
+  border-radius: 50%;
+  font-size: 30px;
+  color: #666;
+  transition: .5s;
+}
+
+ul li a::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background: #69c3e4;
+  transition: .5s;
+  transform: scale(.9);
+  z-index: -1;
+}
+
+ul li a:hover::before {
+  transform: scale(1.1);
+  box-shadow: 0 0 15px lightskyblue;
+}
+
+ul li a:hover {
+  color: #6396b8;
+  box-shadow: 0 0 5px #5a529e;
+  text-shadow: 0 0 5px #3f2c8a;
 }
 
 #Name{
-  text-shadow: 1px 1px 2px black;
-  font-family: Raleway;
-  font-size: 50px;
-  color: rgb(42, 165, 95);
-  text-align: left;
+  padding-left: 30px;
+
+}
+#name{
+  align-items: center;
 }
 
-body{
-  background-image: url("https://i.pinimg.com/564x/df/3f/5d/df3f5d32b101110a320bc7ea84bc5709.jpg");
-  background-repeat: no-repeat; 
-  padding: 5px;
-  background-size: 3000px;
-  height: 450px;
-
-  margin: 0; 
-  padding: 0;
-  font-family: montserrat,'Times New Roman', Times, serif;
+.headerText {
+  font-family: "Signi";
+  font-size: 20px;
 }
 
-.animated-text{
-  color: #fff;
+.auracircle {
+  width:600px;
+  float: right;
+  /* margin-right: 300px; */
   position: absolute;
-  top: 15%;
-  left: 20%; 
-
-  transform: translate(-50%, -50%);
-  background: #2980b9;
-  padding: 0 40 px;
-  height: 60px; 
-  overflow: hidden;
+  right: 40px;
+  /* z-index: -1; */
 }
 
+.pfp{
+  clip-path: circle();
+  width:350px;
+  float: right;
+  margin-right: 150px;
+  position: absolute;
+  right: 9px;
+}
 
-.line{
-  text-transform: uppercase;
-  text-align: center;
-  font-size: 40px;
-  line-height:  60px;
+.custom-image-container{
+  position: relative;
 
 }
 
-.line:first-child{
-  animation: anim 13s infinite;
+.linkedin{
+  margin-top: 5px;
+  translate: translate(20px, 300px);
 }
 
-@keyframes anim {
-  0%{
-    margin-top: 0;
-  }
-  16%{
-    margin-top: -60px;
-  }
-  33%{
-    margin-top: -120px;
-  }
-  50%{
-    margin-top: -180px;
-  }
+.github{
+  margin-top: 6.8px;
 }
 
+.email{
+  margin-top: 6px;
+}
 
+#content{
+  display:flex;
+  width:40%;
+  left:0;
+  margin-left:5%;
+  margin-top:7%;
+  height:400px;
+  justify-content: center;
+  align-items:center;
+  text-align:center;
+  background-color: black;
+  border: 1px solid black;
+  border-radius: 12px;
+  border-color: lightskyblue;
+  box-shadow: 15px 15px rgb(50, 48, 48);
+  animation: fadeIn 5s; 
+}
+
+#word{
+  color:white;
+}
+
+.aboutblurb{
+  font-family: "Signi";
+  font-size: 35px;
+}
+
+@keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
