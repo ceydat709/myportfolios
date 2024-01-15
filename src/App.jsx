@@ -10,6 +10,9 @@ import github from '/Users/ceydatopcu/Desktop/JADE Website/website/myportfolios/
 import linkedin from '/Users/ceydatopcu/Desktop/JADE Website/website/myportfolios/src/images/bxl-linkedin-square.png'
 import email from '/Users/ceydatopcu/Desktop/JADE Website/website/myportfolios/src/images/envelope-regular-24.png'
 import files from '/Users/ceydatopcu/Desktop/JADE Website/website/myportfolios/src/images/files.png'
+import starz from '/Users/ceydatopcu/Desktop/JADE Website/website/myportfolios/src/images/starz.png'
+import cumc from '/Users/ceydatopcu/Desktop/JADE Website/website/myportfolios/src/images/cumc.jpeg'
+import solar from '/Users/ceydatopcu/Desktop/JADE Website/website/myportfolios/src/images/Screen Shot 2023-12-02 at 5.20.27 PM.png'
 
 
 import './App.css'
@@ -22,12 +25,12 @@ function App() {
 
     <div id="nav">
     <h1 id="Name" className = "text">CEYDA TOPCU</h1>
-    
+    <img src={star} alt="Stars" className="star"/>
     
     <div className="navbar">
-      <a href="#home" className = "headerText">ABOUT</a>
-      <a href="#about" className = "headerText">PORTFOLIO</a>
-      <a href="#experience" className = "headerText">RESUME</a>
+      <a href="#home" className = "headerText">PORTFOLIO</a>
+      <a href="#about" className = "headerText">RESEARCH</a>
+      <a href="#experience" className = "headerText">CONTACT</a>
       <a href="#contact" className = "headerText">CONTACT</a>
     </div>
    </div>
@@ -36,7 +39,7 @@ function App() {
 
    <div className="custom-image-container">
     <img src={circlee} alt="Circle" className="auracircle"/>
-    <img src={pfp} alt="React Image" className="pfp"/> 
+    <img src={pfp} alt="React Image" className="pfp" /> 
   </div>
  
   <div id="content" className="section">
@@ -44,32 +47,49 @@ function App() {
         <h2 id ="word">
           <p className="aboutblurb">
             Ceyda is pursuing a B.S. in Computer Science and a minor in Mathematics at 
-            Columbia University, School of Engineering and Applied Science. As a first-generation student, Ceyda has found and is contuing to 
-            utilize the resources around her to foster her passions, which include 
+            Columbia University, School of Engineering and Applied Sciences. 
           </p>
         </h2>
         {/*  home content goes here */
       
         }
       </div>
-
+        
+        <hr class="line" align="center" width="90%"/>
         <div id="home" className="section">
-        <h2>Home Section</h2>
+  
+        <h2 className="homes">PORTFOLIO</h2>
         {/*  home content goes here */
-      
+             <div class = "row">
+        <div class="column">
+          <img src ={beezybody} alt = "React Image" style={{ width: '200px', height: '220px' }} />
+          <p>Beezy-Body is a platform, puzzle game.</p>
+        </div>
+        <div class="column">
+          <img src ={beezybody} alt = "React Image" style={{ width: '200px', height: '220px' }} />
+          <p>Beezy-Body is a platform, puzzle game.</p>
+        </div>
+        <div class="column">
+          <img src ={solar} alt = "React Image" style={{ width: '200px', height: '220px' }} />
+          <p>Solar Cyberrush</p>
+        </div>
+      </div>
         }
       </div>
-      <div id="about" className="section">
-        <h2>About Section</h2>
+     
+
+   
+
+      <div>
         {/*  about content goes here */}
       </div><div id="experience" className="section">
-        <h2>Portfolio Section</h2>
+        <h2 className="homes">RESEARCH</h2>
         {/*  experience content goes here */
-          <img src ={beezybody} alt = "React Image" width={100} height={120}/>
+          <img src ={cumc} alt = "React Image" style={{ width: '200px', height: '220px' }} />
 
         }
       </div><div id="contact" className="section">
-        <h2>Contact Section</h2>
+        <h2 className="homes">CONTACT</h2>
         {/*  contact content goes here */
           <ul>
           <li>
@@ -101,6 +121,11 @@ function App() {
         </ul>
         }
       </div>
+
+<div class="footer">
+</div>
+
+
     </>
 
 )

@@ -49,6 +49,7 @@ body {
 
 .section {
   padding: 50px;
+  font-family: "Signi";
 }
 
 
@@ -147,7 +148,7 @@ ul li a:hover {
 }
 
 #Name{
-  padding-left: 30px;
+  padding-left: 60px;
 
 }
 #name{
@@ -160,12 +161,21 @@ ul li a:hover {
 }
 
 .auracircle {
-  width:600px;
   float: right;
   /* margin-right: 300px; */
   position: absolute;
-  right: 40px;
+  right: 310px;
   /* z-index: -1; */
+  width: 40px;
+  top: 290px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #fff;
+  box-shadow:
+    0 0 3cap 90px #fff,  /* inner white */
+    0 0 110px 120px #f0f, /* middle magenta */
+    0 0 150px 150px #0ff; /* outer cyan */
+  animation: fadeIn 5s;
 }
 
 .pfp{
@@ -209,9 +219,9 @@ ul li a:hover {
   border: 1px solid black;
   border-radius: 12px;
   border-color: lightskyblue;
-  box-shadow: 15px 15px rgb(50, 48, 48);
   animation: fadeIn 5s; 
 }
+
 
 #word{
   color:white;
@@ -225,4 +235,69 @@ ul li a:hover {
 @keyframes fadeIn {
   0% { opacity: 0; }
   100% { opacity: 1; }
+}
+
+.star{
+  margin-right: 600px;
+  width: 90px;
+}
+
+.line {
+  border-bottom: 1px solid rgb(17, 17, 18);
+  margin-top: 110px;
+}
+
+.homes{
+  text-align: center;
+  font-size: 30px;;
+}
+
+/*------------portfolio------------------*/
+
+.portfolio{
+  padding: 50px 0;
+}
+
+.work-list{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-gap: 40px;
+  margin-top: 50px;
+}
+
+.work{
+  border-radius: 10px; 
+  position: relative;
+  overflow: hidden;
+}
+
+.work img{
+  width: 100%;
+  border-radius: 10px;
+  display: block;
+}
+
+.row::after{
+  content: "";
+  clear: both;
+  display: table;
+  margin-left: 20px;
+}
+
+.column{
+  float: left;
+  width: 33.33%;
+}
+
+
+
+/* Footer */
+
+.footer {
+  position:fixed;
+  bottom:0;
+  left:0;
+  width:100%;
+  height: 15px;
+  background-color: lightskyblue;
 }
